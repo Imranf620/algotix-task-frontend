@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Real-Time Group Chat Frontend
+
+## Overview
+This is a real-time group chat application built using Next.js, React, and Socket.IO. The frontend provides a responsive and interactive chat experience with features like user joining, messaging, and online user tracking.
+
+## Features
+- Real-time messaging
+- User authentication with unique user IDs
+- Responsive design (mobile and desktop)
+- Online users list
+- Persistent user sessions
+- Smooth message scrolling
+
+## Prerequisites
+- Node.js (v16 or later)
+- npm or Yarn
+
+## Technologies Used
+- Next.js
+- React
+- Tailwind CSS
+- Socket.IO Client
+- UUID
+- Vercel (recommended for deployment)
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Imranf620/algotix-task-frontend
+cd chat-frontend
+```
 
+### 2. Install Dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Environment Configuration
+Create a `.env` file in the project root with the following variable:
+```
+NEXT_PUBLIC_BACKEND_URL=http://localhost:4000
+```
+
+### 4. Running the Development Server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Deployment
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Vercel Deployment Steps
+1. Connect your GitHub repository
+2. Configure project settings
+3. Add environment variables
+4. Deploy
 
-## Learn More
+## Project Structure
+```
+├── components/         # Reusable components
+├── pages/              # Next.js pages
+├── public/             # Static assets
+├── services/           # Service configurations (socket)
+├── styles/             # Global styles
+└── README.md           # Project documentation
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
+- `NEXT_PUBLIC_BACKEND_URL`: http://localhost:4000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Socket Events
+- `join`: User joins the chat
+- `message`: Send/receive messages
+- `userJoined`: New user notification
+- `userLeft`: User disconnection notification
+- `onlineUsers`: List of current online users
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Responsive Design
+- Mobile-first approach
+- Tailwind CSS for responsive utilities
+- Adaptive sidebar and input layouts
 
-## Deploy on Vercel
+## Performance Optimization
+- Lazy loading
+- Minimal re-renders
+- Efficient state management
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Error Handling
+- Graceful error messages
+- Console error logging
+- User-friendly alerts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Security Considerations
+- Unique user IDs
+- Local storage for session persistence
+- No sensitive data transmission
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+
+## Contact
+Imran Farooq
+imranf620@gmail.com
