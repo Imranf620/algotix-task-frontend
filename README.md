@@ -28,7 +28,7 @@ This is a real-time group chat application built using Next.js, React, and Socke
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/Imranf620/algotix-task-frontend
-cd chat-frontend
+cd algotix-task-frontend
 ```
 
 ### 2. Install Dependencies
